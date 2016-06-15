@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="te6-rP-yvP">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="a8D-pJ-tbs">
+            <objects>
+                <viewController id="bjI-WB-VHG" customClass="ViewController" customModule="Tap_or_Hold_Counter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wnn-QH-EVg"/>
+                        <viewControllerLayoutGuide type="bottom" id="HQe-EV-YAq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h6z-V0-ev3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FkE-w3-ANR">
+                                <rect key="frame" x="232" y="168" width="137" height="264"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="137" id="k5U-tQ-yD5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="80"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qb1-N1-iOe">
+                                <rect key="frame" x="247" y="449" width="107" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="107" id="RZY-Xr-Wqb"/>
+                                </constraints>
+                                <state key="normal" title="Tap&amp;Hold"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FkE-w3-ANR" firstAttribute="top" secondItem="Wnn-QH-EVg" secondAttribute="bottom" constant="104" id="7R5-7m-DSB"/>
+                            <constraint firstItem="FkE-w3-ANR" firstAttribute="centerY" secondItem="h6z-V0-ev3" secondAttribute="centerY" id="pOS-I3-5fw"/>
+                            <constraint firstItem="FkE-w3-ANR" firstAttribute="centerX" secondItem="h6z-V0-ev3" secondAttribute="centerX" id="xWm-PL-ZEY"/>
+                            <constraint firstItem="FkE-w3-ANR" firstAttribute="centerX" secondItem="Qb1-N1-iOe" secondAttribute="centerX" id="yIw-w6-VNU"/>
+                            <constraint firstItem="Qb1-N1-iOe" firstAttribute="top" secondItem="FkE-w3-ANR" secondAttribute="bottom" constant="17" id="yQx-Lr-Xge"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="AR9-69-3RU">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="Pbu-U7-wZ5"/>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="countLabel" destination="FkE-w3-ANR" id="wKR-Vy-HUy"/>
+                        <outlet property="resetLabel" destination="Pbu-U7-wZ5" id="qP6-uU-gww"/>
+                        <outlet property="tapAndHoldLabel" destination="Qb1-N1-iOe" id="ALo-ig-xdG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tOt-du-aG8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1118" y="349"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OyV-vZ-7Nf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="te6-rP-yvP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nHi-ow-Nnh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bjI-WB-VHG" kind="relationship" relationship="rootViewController" id="vb1-lH-ZxY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U9d-7P-leX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="306" y="349"/>
+        </scene>
+    </scenes>
+</document>
