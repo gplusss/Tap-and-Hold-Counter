@@ -32,6 +32,9 @@
                                     <constraint firstAttribute="width" constant="107" id="RZY-Xr-Wqb"/>
                                 </constraints>
                                 <state key="normal" title="Tap&amp;Hold"/>
+                                <connections>
+                                    <action selector="startTapAndHoldLabel:" destination="bjI-WB-VHG" eventType="touchUpInside" id="ZI5-Ux-UfH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
